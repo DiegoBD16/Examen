@@ -44,24 +44,22 @@ class utilidades:
         for ingrediente in ingredientes:
             print(f"* {ingrediente}")
 
+    @staticmethod
+    def crear_receta(tipo_de_receta):
+        recetas = []
+        if receta == 1:
+            receta = receta_Vegetariana()
+        if receta == 2:
+            receta = receta_No_Vegetariana()
+        recetas.append(receta)
+
 # Función principal
 def principal():
-    receta_vegetariana = receta_Vegetariana("Ensalada César", ["lechuga", "queso", "pan tostado", "salsa"], ["Lavar", "Mezclar", "Servir"])
-    receta_no_vegetariana = receta_No_Vegetariana("Pollo al horno", ["pollo", "patatas", "ajo", "aceite"], ["Preparar", "Hornear", "Servir"])
-    
-    # Duplicación de código al imprimir
-    print("== Mostrar recetas ==")
-    utilidades.imprimir_receta(receta_vegetariana)
-    utilidades.imprimir_receta(receta_no_vegetariana)
+    #Variables necesarias para la funcion crear_receta
+    nombre_receta = ""
+    ingredientes_receta = []
+    ingredientes_pasos = []
 
-    # Código duplicado para mostrar ingredientes
-    print("Ingredientes de Ensalada César:")
-    for ingrediente in receta_vegetariana.ingrediente:
-        print(f"* {ingrediente}")
-    
-    print("Ingredientes de Pollo al horno:")
-    for ingrediente in receta_no_vegetariana.ingrediente:
-        print(f"* {ingrediente}")
 
 
 # Ejecutar el programa
